@@ -7,7 +7,6 @@ class Student:
 		self.department=department
 
 	def input(self,numberOfStudent=0):
-		#int(numberOfStudent)
 		for i in range(int(numberOfStudent)):
 			sName=input("Student name: ")
 			sDep=input("Department: ")
@@ -17,3 +16,6 @@ class Student:
 		for student in Student.students:
 			print(student.name+ " is in "+student.department)
 
+	def sort(self):
+		Student.students=sorted(Student.students,key =lambda student:student.name)
+	
