@@ -1,20 +1,10 @@
 #! /usr/bin/python3
 
-from student import Student
+from undergraduate import Undergraduate
+from graduate import Graduate
 
 students=[]
-def main():
-	numberOfStudent=input("Number Of Student: ")
-	while RepresentsInt(numberOfStudent)==False or int(numberOfStudent)<0:
-		print("You suppose to input an integer. Please input againt")
-		numberOfStudent=input("Number Of Student: ")
-		if RepresentsInt(numberOfStudent) and int(numberOfStudent)>0:
-			break
-	stu=Student("","")
-	stu.input(numberOfStudent)
-	stu.sort()
-	stu.output()
-	
+graduate_stus=[]
 
 def RepresentsInt(str):
 	try: 
@@ -23,5 +13,46 @@ def RepresentsInt(str):
 	except ValueError:
 		return False
 
-if __name__ == '__main__':
-	main()
+number_of_student=input("Number Of Student: ")
+while RepresentsInt(number_of_student)==False or int(number_of_student)<0:
+	print("You suppose to input an integer. Please input againt")
+	number_of_student=input("Number Of Student: ")
+	if RepresentsInt(number_of_student) and int(number_of_student)>0:		
+			break
+
+#insert student to the list students
+for i in range(int(number_of_student)):
+	print("student {}".format(i+1))
+	stu_name = input("Student name: ")
+	stu_dep = input("Department: ")
+	check_graduate = input("graduated ?[y/n]")
+	if check_graduate == 'y':
+		company_name = input("company name: ")
+		graduate_stus.append(Graduate(stu_name,stu_dep,company_name))
+	elif check_graduate == 'n':
+		stu_ID = input("Student ID: ")
+		students.append(Undergraduate(stu_name,stu_dep,stu_ID))
+
+#sort student's name in the list in accending order
+for student in students:
+	students = sorted(students,key =lambda student:student.name)
+for student in graduate_stus:
+	graduate_stus = sorted(graduate_stus,key =lambda student:student.name)
+
+#printing...
+print("print...")
+
+#print list of undergraduated student
+print("")
+print("undergraduated student:  ")
+for student in students:
+	print(" ")
+	print(student.get_undergra_stu_info())
+
+#print list of graduated student
+print("")
+print("graduated student:  ")
+for student in graduate_stus:
+	print(" ")
+	print(student.get_graduate_stu_info())
+
