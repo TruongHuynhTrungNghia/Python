@@ -9,4 +9,4 @@ class Graduate(Student):
 
 	def get_graduate_stu_info(self):
 		return (self.get_stu_info() + 
-		"\ncompany: " + self.company)
+				"\ncompany: " + self.company)

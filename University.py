@@ -3,21 +3,23 @@
 from undergraduate import Undergraduate
 from graduate import Graduate
 
-students=[]
-graduate_stus=[]
+students = []
+graduate_stus = []
 
-def RepresentsInt(str):
+def represents_int(str ):
 	try: 
-		int(str)
+		int(str )
 		return True
 	except ValueError:
 		return False
 
-number_of_student=input("Number Of Student: ")
-while RepresentsInt(number_of_student)==False or int(number_of_student)<0:
+number_of_student = input("Number Of Student: ")
+while represents_int(number_of_student) == False or 
+	  int(number_of_student)<0:
 	print("You suppose to input an integer. Please input againt")
-	number_of_student=input("Number Of Student: ")
-	if RepresentsInt(number_of_student) and int(number_of_student)>0:		
+	number_of_student = input("Number Of Student: ")
+	if represents_int(number_of_student) and 
+	    int(number_of_student)>0:		
 			break
 
 #insert student to the list students
@@ -35,9 +37,9 @@ for i in range(int(number_of_student)):
 
 #sort student's name in the list in accending order
 for student in students:
-	students = sorted(students,key =lambda student:student.name)
+	students = sorted(students, key =lambda student:student.name)
 for student in graduate_stus:
-	graduate_stus = sorted(graduate_stus,key =lambda student:student.name)
+	graduate_stus = sorted(graduate_stus, key =lambda student:student.name)
 
 #printing...
 print("print...")
@@ -46,13 +48,12 @@ print("print...")
 print("")
 print("undergraduated student:  ")
 for student in students:
-	print(" ")
+	print("")
 	print(student.get_undergra_stu_info())
 
-#print list of graduated student
-print("")
-print("graduated student:  ")
-for student in graduate_stus:
+#print list of graduated student print("") print("graduated student:  ") for
+student in graduate_stus:    
 	print(" ")
 	print(student.get_graduate_stu_info())
+
 
