@@ -1,11 +1,11 @@
 #! /usr/bin/python3
 
-from student import Student
+from student import stu
 
-class Graduate(Student):
+class graduated(stu):
 
 	def __init__(self, name, department, company):
-		Student.__init__(self, name, department)
+		stu.__init__(self, name, department)
 		self.company = company
 
 	def get_graduate_stu_info(self):

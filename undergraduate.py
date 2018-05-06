@@ -1,12 +1,12 @@
 #! /usr/bin/python3
 
 
-from student import Student
+from student import stu
 
-class Undergraduate(Student):
+class undergraduated(stu):
 
 	def __init__(self, name, department, stu_ID):
-		Student.__init__(self, name, department)
+		stu.__init__(self, name, department)
 		self.stu_ID = stu_ID
 
 	def get_undergra_stu_info(self):

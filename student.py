@@ -1,6 +1,6 @@
 #! /usr/bin/python3
 
-class Student:
+class stu:
 
 	def __init__(self, name, department):
 		self.name = name
