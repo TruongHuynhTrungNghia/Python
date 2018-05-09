@@ -1,0 +1,6 @@
+{
+  "test_graduated.py": true,
+  "test_student.py": true,
+  "test_undergraduate.py": true,
+  "test_unviersity.py": true
+}

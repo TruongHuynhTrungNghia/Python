@@ -1,0 +1,11 @@
+{
+  "test_graduated.py": true, 
+  "test_student.py": true, 
+  "test_student.py::test_student_1": true, 
+  "test_student.py::test_student_2": true, 
+  "test_student.py::test_student_3": true, 
+  "test_student.py::test_student_4": true, 
+  "test_student.py::test_student_5": true, 
+  "test_undergraduate.py": true, 
+  "test_unviersity.py": true
+}
