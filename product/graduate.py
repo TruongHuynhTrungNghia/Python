@@ -1,6 +1,7 @@
 #! /usr/bin/python3
 
-from product.student import Student
+# from product.student import Student
+from student import Student
 
 class Graduated(Student):
 

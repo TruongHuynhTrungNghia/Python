@@ -2,5 +2,7 @@
   "test_graduated.py": true,
   "test_student.py": true,
   "test_undergraduate.py": true,
-  "test_unviersity.py": true
+  "test_university.py": true,
+  "test_unviersity.py": true,
+  "test_unviersity.py::test_sort_name": true
 }
